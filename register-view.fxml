@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.prodjects_gui.RegisterController">
+
+    <children>
+
+        <!-- Left Panel -->
+        <VBox prefWidth="280.0"
+              prefHeight="600.0"
+              alignment="CENTER"
+              spacing="15"
+              style="-fx-background-color:#2E86DE;">
+
+            <Label text="Learning Management System"
+                   textFill="WHITE"
+                   wrapText="true"
+                   style="-fx-font-weight:bold;">
+                <font>
+                    <Font size="24"/>
+                </font>
+            </Label>
+
+            <Label text="Create your account"
+                   textFill="WHITE">
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Label>
+
+        </VBox>
+
+        <!-- Register Form -->
+        <VBox layoutX="310.0"
+              layoutY="25.0"
+              prefWidth="430.0"
+              spacing="12"
+              alignment="CENTER">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="REGISTER">
+                <font>
+                    <Font size="28"/>
+                </font>
+            </Label>
+
+            <ComboBox fx:id="registerAs"
+                      prefWidth="300"
+                      promptText="Register As"/>
+
+            <TextField fx:id="firstNameField"
+                       prefWidth="300"
+                       promptText="First Name"/>
+
+            <TextField fx:id="lastNameField"
+                       prefWidth="300"
+                       promptText="Last Name"/>
+
+            <TextField fx:id="usernameField"
+                       prefWidth="300"
+                       promptText="Username"/>
+
+            <TextField fx:id="emailField"
+                       prefWidth="300"
+                       promptText="Email"/>
+
+            <PasswordField fx:id="passwordField"
+                           prefWidth="300"
+                           promptText="Password"/>
+
+            <PasswordField fx:id="confirmPasswordField"
+                           prefWidth="300"
+                           promptText="Confirm Password"/>
+
+            <Label fx:id="messageLabel"
+                   textFill="RED"/>
+
+            <HBox spacing="15" alignment="CENTER">
+
+                <Button text="Register"
+                        prefWidth="120"
+                        onAction="#registerUser"
+                        style="-fx-background-color:#2E86DE;
+                               -fx-text-fill:white;
+                               -fx-font-weight:bold;"/>
+
+                <Button text="Back to Login"
+                        prefWidth="120"
+                        onAction="#backToLogin"/>
+
+            </HBox>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

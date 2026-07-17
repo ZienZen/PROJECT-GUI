@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.prodjects_gui.LoginController">
+
+    <children>
+
+        <!-- Left Side -->
+        <VBox layoutX="0.0"
+              layoutY="0.0"
+              prefHeight="500.0"
+              prefWidth="300.0"
+              style="-fx-background-color:#2E86DE;"
+              alignment="CENTER"
+              spacing="15">
+
+            <Label text="Learning Management System"
+                   textFill="WHITE"
+                   wrapText="true"
+                   style="-fx-font-weight:bold;">
+                <font>
+                    <Font size="26"/>
+                </font>
+            </Label>
+
+            <Label text="Welcome Back!"
+                   textFill="WHITE">
+                <font>
+                    <Font size="18"/>
+                </font>
+            </Label>
+
+        </VBox>
+
+        <!-- Right Side -->
+        <VBox layoutX="330.0"
+              layoutY="60.0"
+              prefWidth="320.0"
+              spacing="15"
+              alignment="CENTER">
+
+            <Label text="LOGIN">
+                <font>
+                    <Font size="28"/>
+                </font>
+            </Label>
+
+            <TextField fx:id="emailField"
+                       promptText="Email"
+                       prefHeight="40"
+                       prefWidth="260"/>
+
+            <PasswordField fx:id="passwordField"
+                           promptText="Password"
+                           prefHeight="40"
+                           prefWidth="260"/>
+
+            <Button text="Login"
+                    prefWidth="260"
+                    prefHeight="40"
+                    onAction="#login"
+                    style="-fx-background-color:#2E86DE;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+            <Hyperlink text="Create an Account"
+                       onAction="#openRegister"/>
+
+            <Label fx:id="messageLabel"
+                   textFill="RED"/>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
